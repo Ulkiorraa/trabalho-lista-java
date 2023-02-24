@@ -32,6 +32,6 @@ public class listadupla {
     }
 
     public void printList(){
-        listaPessoa.forEach(System.out::println);
+        listaPessoa.forEach((i)->System.out.println(i.PessoaToString()));
     }
 }
