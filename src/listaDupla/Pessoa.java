@@ -7,7 +7,7 @@ public class Pessoa {
     private String telefone;
 
     // METODOS
-   public Pessoa() {
+    public Pessoa() {
         this.nome = "";
         this.idade = 0;
         this.telefone = "";
@@ -43,7 +43,19 @@ public class Pessoa {
         return this.telefone;
     }
 
-    public String PessoaToString(){
+    public String PessoaToString() {
         return "Nome: " + getNome() + "\tIdade: " + getIdade() + "\tTelefone: " + getTelefone() + "\n";
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (!(obj instanceof Pessoa)) {
+            return false;
+        }
+        Pessoa outraPessoa = (Pessoa) obj;
+        return this.nome.equals(outraPessoa.nome) && this.idade == outraPessoa.idade && this.telefone.equals(outraPessoa.telefone);
     }
 }

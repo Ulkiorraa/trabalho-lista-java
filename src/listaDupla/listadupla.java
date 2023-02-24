@@ -2,37 +2,36 @@ package listaDupla;
 
 import java.util.ArrayList;
 
+
 public class listadupla {
     // ATRIBUTOS
     private ArrayList<Pessoa> listaPessoa;
 
-    // METODO
+    // MÉTODOS
 
     public listadupla(){
         this.listaPessoa = new ArrayList<Pessoa>();
     }
 
-    public ArrayList<Pessoa> getListaPessoa() {
-        return this.listaPessoa;
-    }
-
-    private void setListaPessoa(ArrayList<Pessoa> listaPessoa) {
-        this.listaPessoa = listaPessoa;
-    }
-
     public void addEnd(Pessoa ficha){
-        ArrayList<Pessoa> aux = getListaPessoa();
-        aux.add(ficha);
-        setListaPessoa(aux);
+        if (listaPessoa.contains(ficha)) {
+            System.out.println("Dados já contidos na lista.");
+            return;
+        }
+        listaPessoa.add(ficha);
+        System.out.println("Dados adicionados no fim da lista!");
     }
-
+    
     public void addBegin(Pessoa ficha){
-        ArrayList<Pessoa> aux = getListaPessoa();
-        aux.add(0, ficha);
-        setListaPessoa(aux);
+        if (listaPessoa.contains(ficha)) {
+            System.out.println("Dados já contidos na lista.");
+            return;
+        }
+        listaPessoa.add(0, ficha);
+        System.out.println("Dados adicionados no começo da lista!");
     }
 
     public void printList(){
-        getListaPessoa().forEach((i)->System.out.println(i.PessoaToString()));
+        listaPessoa.forEach(System.out::println);
     }
 }
