@@ -43,7 +43,7 @@ public class Pessoa {
         return this.telefone;
     }
 
-    public String PessoaToString() {
+    public String toString() {
         return "Nome: " + getNome() + "\tIdade: " + getIdade() + "\tTelefone: " + getTelefone() + "\n";
     }
 

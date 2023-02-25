@@ -37,10 +37,8 @@ public class listadupla {
         
         if (opcao == 1) {
             amigos.addBegin(pessoa);
-            System.out.println("Dados adicionados no começo da lista!");
         } else {
             amigos.addEnd(pessoa);
-            System.out.println("Dados adicionados no fim da lista!");
         }
     }
 
@@ -63,6 +61,6 @@ public class listadupla {
     }
 
     public void printList(){
-        listaPessoa.forEach((i)->System.out.println(i.PessoaToString()));
+        listaPessoa.forEach(System.out::println);
     }
 }
