@@ -12,7 +12,8 @@ public class App {
         while (continuar) {
             System.out.println("Digite a opção desejada:");
             System.out.println("1 - Adicionar pessoa");
-            System.out.println("2 - Sair");
+            System.out.println("2 - remover pessoa");
+            System.out.println("3 - Sair");
             
             int opcao = ler.nextInt();
             ler.nextLine();
@@ -21,8 +22,13 @@ public class App {
                 case 1:
                     amigos.adicionarPessoa(ler, amigos);
                     break;
-
+                
                 case 2:
+                System.out.println("Que pessoa desseja remover?");
+                amigos.removerPessoa(ler);
+                break;
+
+                case 3:
                     continuar = false;
                     System.out.println("Lista fechada!");
                     break;

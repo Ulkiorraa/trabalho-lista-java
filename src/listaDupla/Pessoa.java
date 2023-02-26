@@ -56,6 +56,6 @@ public class Pessoa {
             return false;
         }
         Pessoa outraPessoa = (Pessoa) obj;
-        return this.nome.equals(outraPessoa.nome) && this.idade == outraPessoa.idade && this.telefone.equals(outraPessoa.telefone);
+        return (this.nome.equals(outraPessoa.nome) && this.idade == outraPessoa.idade) || this.telefone.equals(outraPessoa.telefone);
     }
 }

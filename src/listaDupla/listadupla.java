@@ -42,6 +42,23 @@ public class listadupla {
         }
     }
 
+    public void removerPessoa(Scanner ler) {
+        String nome = ler.nextLine();
+        Pessoa pessoaRemover = null;
+        for (Pessoa pessoa : listaPessoa) {
+            if (pessoa.getNome().equals(nome)) {
+                pessoaRemover = pessoa;
+                break;
+            }
+        }
+        if (pessoaRemover != null) {
+            listaPessoa.remove(pessoaRemover);
+            System.out.println("Pessoa " + nome + " removida da lista.");
+        } else {
+            System.out.println("Pessoa " + nome + " não encontrada na lista.");
+        }
+    }
+
     public void addEnd(Pessoa ficha){
         if (listaPessoa.contains(ficha)) {
             System.out.println("Dados já contidos na lista.");
